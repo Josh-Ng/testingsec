@@ -20,11 +20,11 @@ $(document).ready(function () {
     start();
     UseCookie();
 
-    DonkeySR.onreconnected((connectionId) => {
+    DonkeySR.onreconnected((_) => {
        State_ReadyToPost();
     });     
 
-    DonkeySR.onreconnecting((connectionId) => {
+    DonkeySR.onreconnecting((_) => {
         State_PostNotReady("Connecting");
     });  
 
